@@ -17,6 +17,6 @@ app.use('/modules', express.static(__dirname + '/node_modules'));
 var routes = require('./routes')
 routes.set(app);
 
-app.listen(3000, () => {
+app.listen(3000, function(){
     console.log('http://localhost:3000');
 });
