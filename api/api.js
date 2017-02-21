@@ -2,7 +2,7 @@
 var express = require('express');
 var app = express();
 
-app.get('/', (req, res) => {
+app.get('/', function(req, res) {
     res.json({
     	id: 1,
     	nome: 'VOU TROCAR DE NOVO'
