@@ -1,0 +1,124 @@
+/**MENU*/
+.navbar-brand {
+    background: url(assets/img/logo-melhor-nav.png) no-repeat;
+    background-position: center;
+    text-indent: -999px;
+    display: block;
+    width: 130px;
+    height: 60px;
+    margin: 3px 3px 3px 0px;
+}
+
+.navbar-nav>li>a {
+	padding-top: 22px;
+	padding-bottom: 15px;
+
+}
+/**MENU FINAL*/
+
+
+/**SLIDER*/
+.carousel {
+    position: relative;
+    margin-top: 64px;
+    margin-bottom: 65px;
+}
+.carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background-color: #7c56a3;
+}
+.carousel-caption h3{
+	font-family: 'Pacifico', cursive;
+	font-size: 40px;
+	color: #181818;
+    text-shadow: 0 1px 2px rgba(177, 149, 149, 0.79);
+}
+.carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #000\9;
+    background-color: rgba(177, 149, 149, 0.79);
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+.carousel-caption p{
+    font-family: 'Pacifico', cursive;
+    font-size: 36px;
+    line-height: 30px;
+    color: #f1eff3;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.79);
+}
+.carousel-caption a{
+	display: block;
+    height: 50px;
+    text-align: center;
+    background: #7c56a3;
+    width: 96px;
+    margin: 0 auto;
+    line-height: 45px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 13px;
+}
+
+.carousel-caption a:hover{
+	color: #FFFFFF;
+    background: #8946cd;
+    text-decoration: none;
+    box-shadow: 2px 2px 7px black;
+}
+/**SLIDER FINAL*/
+
+
+.quemsomos{
+	margin-bottom: 30px;
+}
+
+.box{
+	margin-bottom: 30px;
+}
+.box img{
+    border: solid 10px #333333;
+}
+.modal-body{
+    overflow: auto;
+    height: 200px;
+    padding: 0 8px 0px 5px; 
+}
+
+.modal img{
+	width: 100%;
+}
+
+.titulo{
+	font-family: 'Pacifico', cursive;
+    font-size: 38px;
+    line-height: 40px;
+    margin-bottom: 15px;
+}
+
+.banner-fix{
+    height: 388px;
+    background-position: center;
+    background-size: 100%;
+    background-image: url(assets/img/slide-2.jpg);
+}
+
+.banner-fix-quemsomos{
+    height: 388px;
+    background-position: center;
+    background-size: 100%;
+    background-image: url(assets/img/bg-quemsomos.jpg);
+}
+
+
+
+

@@ -3,6 +3,6 @@ var router  = express.Router();
 
 // Rota para o inicio do site
 router.get('/', require('./home/index'));
-//router.get('/cadastro', require('./cadastro/index'));
-
+router.get('/quemsomos', require('./quemsomos/index'));
+router.get('/contato', require('./contato/index'));
 module.exports = router;

@@ -8,7 +8,7 @@ var Tasks = {
     },
     getTask: function (path, task)
     {
-        return require(`./${path}/gulp${task}.js`)(this.gulp, this.plugins);
+        return require('./'+path+'/gulp'+task+'.js')(this.gulp, this.plugins);
     }
 };
 
