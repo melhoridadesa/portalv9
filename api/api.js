@@ -9,8 +9,6 @@ app.get('/', (req, res) => {
     });
 });
 
-const PORT = 4000;
-
-app.listen(PORT, () => {
-    console.log(`http://localhost:${PORT}`);
+app.listen(4000, () => {
+    console.log('http://localhost:4000');
 });

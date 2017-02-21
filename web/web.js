@@ -17,9 +17,6 @@ app.use('/modules', express.static(__dirname + '/node_modules'));
 var routes = require('./routes')
 routes.set(app);
 
-//INICIA O SERVER
-const PORT = '3000';
-
-app.listen(PORT, () => {
-    console.log(`http://localhost:${PORT}`);
+app.listen(3000, () => {
+    console.log('http://localhost:3000');
 });
