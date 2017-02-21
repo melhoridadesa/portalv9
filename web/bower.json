@@ -1,0 +1,22 @@
+{
+  "name": "portalv9",
+  "description": "Instalador dos pacotes de terceiro do portal do melhor idade",
+  "main": "index.js",
+  "authors": [
+    "Nome de voces"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/melhoridadesa/portalv9",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/vendor/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "*",
+    "font-awesome": "^4.6.3"
+  }
+}
