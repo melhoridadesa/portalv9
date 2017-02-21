@@ -1,8 +1,8 @@
 "use strict";
-let express = require('express');
-let http = require('http');
-let app = express();
-let mustacheExpress = require('mustache-express');
+var express = require('express');
+var http = require('http');
+var app = express();
+var mustacheExpress = require('mustache-express');
 
 
 // middlewares
