@@ -40,9 +40,24 @@ Agora voce ira inserir no portal.conf a seguinte instrucao:
  <VirtualHost *:80>
      ServerName melhoridade.com.br
  </VirtualHost>
+ <VirtualHost *:80>
+     ServerName api.melhoridade.com.br
+ </VirtualHost>
 ```
 
 Agora voce devera executar no terminal as instrucoes:
 
-  a2ensite portal.conf
-  service apache2 restart
+	a2ensite portal.conf
+	service apache2 restart
+
+Agora voce devera alterar o hosts da seguinte maneira
+
+	vi /etc/hosts
+
+E ira inserir a seguinte linha:
+
+```
+127.0.0.1   melhoridade.com.br
+127.0.0.1   api.melhoridade.com.br
+127.0.0.1   www.melhoridade.com.br
+```
