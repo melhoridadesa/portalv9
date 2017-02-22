@@ -5,8 +5,9 @@
     "start": "node api.js"
   },
   "dependencies": {
-    "node-env-file": "^0.1.8",
+    "cors": "^2.7.1",
     "express": "^4.14.0",
-    "cors": "^2.7.1"
+    "mysql": "^2.13.0",
+    "node-env-file": "^0.1.8"
   }
 }

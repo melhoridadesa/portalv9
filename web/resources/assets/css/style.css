@@ -1,6 +1,6 @@
 /**MENU*/
 .navbar-brand {
-    background: url(assets/img/logo-melhor-nav.png) no-repeat;
+    background: url(../img/logo-melhor-nav.png) no-repeat;
     background-position: center;
     text-indent: -999px;
     display: block;
@@ -20,7 +20,7 @@
 /**SLIDER*/
 .carousel {
     position: relative;
-    margin-top: 64px;
+    margin-top: 50px;
     margin-bottom: 65px;
 }
 .carousel-indicators .active {
@@ -109,14 +109,14 @@
     height: 388px;
     background-position: center;
     background-size: 100%;
-    background-image: url(assets/img/slide-2.jpg);
+    background-image: url(../img/slide-2.jpg);
 }
 
 .banner-fix-quemsomos{
     height: 388px;
     background-position: center;
     background-size: 100%;
-    background-image: url(assets/img/bg-quemsomos.jpg);
+    background-image: url(../img/bg-quemsomos.jpg);
 }
 
 
