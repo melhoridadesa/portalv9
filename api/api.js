@@ -1,34 +1,26 @@
-"use strict";
-var express = require('express');
+var express    = require("express");
+var mysql      = require('mysql');
+var connection = mysql.createConnection({
+    host     : 'localhost',
+    user     : 'root',
+    password : 'mdba2007',
+    database : 'dbmelhoridade'
+});
 var app = express();
 
-app.get('/', function(req, res) {
-
-    var mysql      = require('mysql');
-    var connection = mysql.createConnection({
-        host     : 'localhost',
-        user     : 'root',
-        password : 'mdba2007',
-        database : 'dbmelhoridade'
-    });
-
-    connection.connect();
-
-    connection.query('select titulo,link,imagem from tb_banner;',
-        function (error, results, fields) {
-        if (error){
-            console.log(error);
-        }else {
-            res.json(results);
-        }
-
-    });
-
-    connection.end();
+connection.connect(function(err){
+    if(!err) {
+        console.log("Database conectado ... \n\n");
+    } else {
+        console.log("Erro ao conectar ... \n\n");
+    }
 });
 
-
-
-app.listen(4000, function() {
-    console.log('http://localhost:4000');
+app.get("/",function(req,res){
+    connection.query('select titulo,link,imagem from tb_banner;', function(err, rows, fields) {
+        connection.end();
+        res.json(rows);
+    });
 });
+
+app.listen(4000);
