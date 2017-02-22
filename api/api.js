@@ -3,7 +3,7 @@ var mysql      = require('mysql');
 var connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
-    password : 'mdba2007',
+    password : '123456',
     database : 'dbmelhoridade'
 });
 var app = express();
@@ -18,7 +18,6 @@ connection.connect(function(err){
 
 app.get("/",function(req,res){
     connection.query('select titulo,link,imagem from tb_banner;', function(err, rows, fields) {
-        connection.end();
         res.json(rows);
     });
 });
