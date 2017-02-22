@@ -23,27 +23,23 @@ app.get("/tb_banner",function(req,res){
 });
 
 app.get("/tb_usuario",function(req,res){
-    connection.query('select nome,senha, from tb_usuario;', function(err, rows, fields) {
-        connection.end();
+    connection.query('select nome,senha from tb_usuario;', function(err, rows, fields) {
         res.json(rows);
     });
 });
 app.get("/tb_cadastro_idoso",function(req,res){
     connection.query('select nome,idade,documento from tb_cadastro_idoso', function(err, rows, fields) {
-        connection.end();
         res.json(rows);
     });
 });
 app.get("/tb_quemsomos",function(req,res){
     connection.query('select titulo,texto from tb_quemsomos', function(err, rows, fields) {
-        connection.end();
         res.json(rows);
     });
 });
 
 app.get("/tb_site",function(req,res){
     connection.query('select imagem,titulo, texto from tb_site', function(err, rows, fields) {
-        connection.end();
         res.json(rows);
     });
 });
