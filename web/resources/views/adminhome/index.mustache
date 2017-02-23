@@ -44,13 +44,41 @@
 
 
    
-    <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
    
 
-    <script src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 
 
-    <script src="assets/js/app.min.js"></script>
+    <script src="/assets/js/app.min.js"></script>
+
+    <script>
+
+      $( document ).ready(function() {
+          
+        $.ajax({
+          method: "POST",
+          url: "http://api.melhoridade.com.br:4000/login",
+          data: { nome: "admin", senha: "123456" }
+        })
+          .done(function( data ) {
+            //if aqui - redirect
+
+            if(data[0].contador > 0){
+              alert('Acesso autorizado');
+            }else{
+              alert('Barrado no baile');
+            }
+
+          });
+      });
+
+
+
+
+
+
+</script>
 
   </body>
 </html>
