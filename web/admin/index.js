@@ -5,5 +5,5 @@ var router  = express.Router();
 router.get('/', require('./home/index'));
 router.get('/quemsomos', require('./quemsomos/index'));
 router.get('/inscricoes', require('./inscricoes/index'));
-//router.get('/contato', require('./contato/index'));
+router.get('/noticias', require('./noticias/index'));
 module.exports = router;
