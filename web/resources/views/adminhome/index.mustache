@@ -20,19 +20,19 @@
 
     <img src="../assets/img/logo-melhor-idade.png" class="center-block" alt="">
 
-      <form class="form-signin">
+    
         <h2 class="titulo text-center">Melhor Idade S.a</h2>
         <h2 class="form-signin-heading titulo text-center">Entrar</h2>
-        <label for="inputEmail" class="sr-only">Usuario</label>
-        <input id="inputEmail" class="form-control" placeholder="Usuario" required>
+        <label for="Nome" class="sr-only">Usuario</label>
+        <input id="inputNome" class="form-control" placeholder="Usuario" required>
         <br />
         <label for="inputPassword" class="sr-only">Senha</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
         <div class="checkbox">
 
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">entrar</button>
-      </form>
+        <button class="btn btn-lg btn-primary btn-block" id="btnLogin">entrar</button>
+      
       </div>
   </div>
 </div> <!-- /container -->
@@ -55,22 +55,26 @@
     <script>
 
       $( document ).ready(function() {
-          
-        $.ajax({
-          method: "POST",
-          url: "http://api.melhoridade.com.br:4000/login",
-          data: { nome: "admin", senha: "123456" }
-        })
-          .done(function( data ) {
-            //if aqui - redirect
 
-            if(data[0].contador > 0){
-              alert('Acesso autorizado');
-            }else{
-              alert('Barrado no baile');
-            }
+        $( "#btnLogin" ).click(function() {
+            
+            var vNome = $('#inputNome').val();
+            var vSenha = $('#inputPassword').val();
 
-          });
+            $.ajax({
+              method: "POST",
+              url: "http://api.melhoridade.com.br:4000/login",
+              data: { nome: vNome, senha: vSenha }
+            }).done(function( data ) {
+              if(data[0].contador > 0){
+                window.location.href = "/quemsomos";
+              }else{
+                alert('Barrado no baile');
+              }
+            });
+
+        });
+        
       });
 
 

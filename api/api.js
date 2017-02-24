@@ -1,5 +1,7 @@
 var express    = require("express");
 var mysql      = require('mysql');
+var bodyParser  = require('body-parser');
+
 var connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
@@ -8,6 +10,10 @@ var connection = mysql.createConnection({
 });
 var app = express();
 
+
+app.use(bodyParser.urlencoded({ extended: false }));
+
+
 connection.connect(function(err){
     if(!err) {
         console.log("Database conectado ... \n\n");
@@ -15,6 +21,27 @@ connection.connect(function(err){
         console.log("Erro ao conectar ... \n\n");
     }
 });
+
+
+app.post('/login', function (req, res) {
+    var data = req.body;
+    
+   
+
+    connection.query('select count(1) contador from tb_usuario where nome = \''+data.nome+'\' and senha = \''+data.senha+'\';' , 
+        function(err, rows, fields) {
+        
+        console.log(rows);
+        res.json(rows);
+
+    });
+
+    //var nome = {nome: req.nome};
+    //res.json(nome); 
+});
+
+
+
 
 app.get("/tb_banner",function(req,res){
     connection.query('select titulo,link,imagem from tb_banner;', function(err, rows, fields) {
