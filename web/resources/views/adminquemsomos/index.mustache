@@ -44,24 +44,49 @@
   <div class="col-lg-2"></div>
     <div class="col-lg-8">
 
-    <form style=" margin-top:100px;">
-       <div class="form-group">
-        <textarea class="form-control" rows="2" placeholder="Insira texto para alterar 'Título' "></textarea>
+
+       <div class="form-group" style=" margin-top:100px;">
+        <textarea id="titulo" class="form-control" rows="2" placeholder="Insira texto para alterar 'Título' "></textarea>
       </div>
       <div class="form-group">
-        <textarea class="form-control" rows="8" placeholder="Insira texto para alterar 'Quem Somos'"></textarea>
+        <textarea id="texto" class="form-control" rows="8" placeholder="Insira texto para alterar 'Quem Somos'"></textarea>
       </div>
-      <button type="submit" class="btn btn-default">Atualizar</button>
-    </form>
+      <button id="btnAtualiza" class="btn btn-default">Atualizar</button>
+
 
       </div>
   </div>
 </div> <!-- /container -->
 
    
-    <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
-    <script src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="assets/js/app.min.js"></script>
+    <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/assets/js/app.min.js"></script>
+
+    <script>
+
+      $( document ).ready(function() {
+
+        $( "#btnAtualiza" ).click(function() {
+            
+            var vTitulo = $('#titulo').val();
+            var vTexto = $('#texto').val();
+
+            $.ajax({
+              method: "POST",
+              url: "http://api.melhoridade.com.br:4000/ins_quemsomos",
+              data: { titulo: vTitulo, texto: vTexto }
+            }).done(function( data ) {
+                alert('Quem somos atualizado com sucesso!');
+
+            });
+
+        });
+        
+      });
+
+</script>    
+
 
   </body>
 </html>

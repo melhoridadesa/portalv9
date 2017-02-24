@@ -40,6 +40,24 @@ app.post('/login', function (req, res) {
     //res.json(nome); 
 });
 
+app.post('/ins_quemsomos', function (req, res) {
+    var data = req.body;
+    
+    console.log(data);
+
+    connection.query('INSERT INTO dbmelhoridade.tb_quem_somos (id, titulo, texto) VALUES(1, \''+data.titulo+'\', \''+data.texto+'\') ON DUPLICATE KEY UPDATE titulo=\''+data.titulo+'\', texto=\''+data.texto+'\';' , 
+        function(err, rows, fields) {
+        
+
+        res.json(rows);
+
+    });
+
+    //var nome = {nome: req.nome};
+    //res.json(nome); 
+});
+
+
 
 
 
