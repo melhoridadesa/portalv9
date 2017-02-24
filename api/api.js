@@ -59,8 +59,8 @@ app.get("/tb_cadastro_idoso",function(req,res){
         res.json(rows);
     });
 });
-app.get("/tb_quemsomos",function(req,res){
-    connection.query('select titulo,texto from tb_quemsomos', function(err, rows, fields) {
+app.get("/tb_quem_somos",function(req,res){
+    connection.query('select titulo,texto from tb_quem_somos', function(err, rows, fields) {
         res.json(rows);
     });
 });
