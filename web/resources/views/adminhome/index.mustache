@@ -67,7 +67,7 @@
               data: { nome: vNome, senha: vSenha }
             }).done(function( data ) {
               if(data[0].contador > 0){
-                window.location.href = "/quemsomos";
+                window.location.href = "/admin/menu";
               }else{
                 alert('Barrado no baile');
               }
